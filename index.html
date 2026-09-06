@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Amany Mustafa | Aspiring Data Engineer</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0b1120;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 17, 32, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .nav-container {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: #38bdf8;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav ul a {
+      color: #cbd5e1;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav ul a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 70px;
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(56,189,248,.13),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 20% 80%,
+          rgba(99,102,241,.10),
+          transparent 30%
+        );
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid #334155;
+      border-radius: 30px;
+      color: #38bdf8;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: #94a3b8;
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 1px solid #334155;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: #38bdf8;
+      color: #07111f;
+      border-color: #38bdf8;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #7dd3fc;
+    }
+
+    .btn-secondary:hover {
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: #38bdf8;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    section h2 {
+      font-size: 38px;
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      color: #94a3b8;
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 50px;
+    }
+
+    .about-text p {
+      color: #94a3b8;
+      margin-bottom: 18px;
+    }
+
+    .info-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 25px;
+    }
+
+    .info-item {
+      padding: 15px 0;
+      border-bottom: 1px solid #1e293b;
+      color: #94a3b8;
+    }
+
+    .info-item:last-child {
+      border-bottom: 0;
+    }
+
+    .info-item strong {
+      color: #f8fafc;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .skill {
+      padding: 18px;
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      color: #cbd5e1;
+      transition: .3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 27px;
+      transition: .3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+    }
+
+    .project-number {
+      color: #38bdf8;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .project-card h3 {
+      margin: 15px 0 12px;
+      font-size: 21px;
+    }
+
+    .project-card p {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      background: #1e293b;
+      color: #cbd5e1;
+      padding: 5px 9px;
+      border-radius: 5px;
+      font-size: 11px;
+    }
+
+    /* EDUCATION */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .education-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .education-card h3 {
+      margin: 10px 0;
+    }
+
+    .muted {
+      color: #94a3b8;
+    }
+
+    /* LEARNING */
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .learning-card {
+      padding: 25px;
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+    }
+
+    .learning-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .learning-card p {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      text-align: center;
+      padding: 60px 30px;
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+    }
+
+    .contact-box p {
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      padding: 11px 17px;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .contact-link:hover {
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #1e293b;
+      padding: 25px 0;
+      text-align: center;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      nav ul {
+        display: none;
+      }
+
+      .about-grid,
+      .projects-grid,
+      .skills-grid,
+      .education-grid,
+      .learning-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="container nav-container">
+
+      <a href="#home" class="logo">AMANY.</a>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="container hero-content">
+
+      <div class="badge">
+        ● ASPIRING DATA ENGINEER
+      </div>
+
+      <h1>
+        Building <span>Reliable Solutions</span> with Data.
+      </h1>
+
+      <p>
+        Third-year Information Systems student at Assiut University,
+        building a strong foundation in Data Engineering through Python,
+        SQL, databases, ETL, data pipelines, and Microsoft Azure.
+      </p>
+
+      <div class="buttons">
+        <a href="#projects" class="btn btn-primary">
+          View Projects →
+        </a>
+
+        <a href="#contact" class="btn btn-secondary">
+          Contact Me
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-label">
+        ABOUT ME
+      </div>
+
+      <h2>
+        Learning to build with data.
+      </h2>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <p>
+            I am building my foundation in Data Engineering by combining
+            programming, databases, cloud technologies, and practical projects.
+          </p>
+
+          <p>
+            My current focus is on understanding how raw data can be
+            extracted, cleaned, transformed, stored, and prepared for
+            analytics.
+          </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <div class="info-item">
+            <strong>Programming</strong><br>
+            Python for data processing, automation, and workflows.
+          </div>
+
+          <div class="info-item">
+            <strong>Data & Databases</strong><br>
+            SQL, relational databases, data cleaning, transformation,
+            and database design.
+          </div>
+
+          <div class="info-item">
+            <strong>Cloud</strong><br>
+            Exploring Microsoft Azure and cloud data pipelines.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-label">
+        TECHNICAL SKILLS
+      </div>
+
+      <h2>
+        Tools I work with.
+      </h2>
+
+      <p class="section-intro">
+        A growing toolkit focused on the core technologies used in
+        Data Engineering.
+      </p>
+
+
+      <div class="skills-grid">
+
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">ETL / ELT</div>
+        <div class="skill">Data Pipelines</div>
+        <div class="skill">Data Cleaning</div>
+        <div class="skill">Data Transformation</div>
+        <div class="skill">Relational Databases</div>
+        <div class="skill">Database Design</div>
+        <div class="skill">Microsoft Azure</div>
+        <div class="skill">Git</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">Jupyter Notebook</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section id="projects">
+
+    <div class="container">
+
+      <div class="section-label">
+        FEATURED PERSONAL PROJECTS
+      </div>
+
+      <h2>
+        Projects built around data.
+      </h2>
+
+      <p class="section-intro">
+        Personal projects focused on applying Data Engineering concepts
+        through practical workflows.
+      </p>
+
+
+      <div class="projects-grid">
+
+
+        <div class="project-card">
+
+          <div class="project-number">01</div>
+
+          <h3>
+            End-to-End ETL Pipeline
+          </h3>
+
+          <p>
+            Designed an end-to-end ETL workflow using Python and SQL
+            to extract raw data, clean and transform it, validate the
+            results, and load processed data into a relational database.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">ETL</span>
+            <span class="tag">Data Cleaning</span>
+          </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+          <div class="project-number">02</div>
+
+          <h3>
+            Data Warehouse Design
+          </h3>
+
+          <p>
+            Designed a structured data warehouse model using SQL,
+            including fact and dimension tables to organize analytical
+            data and support efficient querying.
+          </p>
+
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Data Warehouse</span>
+            <span class="tag">Star Schema</span>
+            <span class="tag">Data Modeling</span>
+          </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+          <div class="project-number">03</div>
+
+          <h3>
+            Azure Data Pipeline
+          </h3>
+
+          <p>
+            Designed a cloud-based data pipeline concept using
+            Microsoft Azure to demonstrate how data can be ingested,
+            transformed, and prepared for analytics.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Microsoft Azure</span>
+            <span class="tag">Data Pipelines</span>
+            <span class="tag">ETL</span>
+            <span class="tag">Cloud</span>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EDUCATION -->
+  <section id="education">
+
+    <div class="container">
+
+      <div class="section-label">
+        EDUCATION & TRAINING
+      </div>
+
+      <h2>
+        Building the foundation.
+      </h2>
+
+
+      <div class="education-grid">
+
+
+        <div class="education-card">
+
+          <div class="section-label">
+            UNIVERSITY
+          </div>
+
+          <h3>
+            Faculty of Computers and Information
+          </h3>
+
+          <p class="muted">
+            Assiut University
+          </p>
+
+          <br>
+
+          <strong>
+            Information Systems · Third-Year Student
+          </strong>
+
+          <p class="muted">
+            Expected Graduation: 2027
+          </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+          <div class="section-label">
+            TRAINING
+          </div>
+
+          <h3>
+            DEPI – AI & Data Science
+          </h3>
+
+          <p class="muted">
+            Microsoft Data Engineer
+          </p>
+
+          <br>
+
+          <p class="muted">
+            Focused on Python, SQL, databases, Data Engineering
+            fundamentals, ETL, data pipelines, and Microsoft Azure.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CURRENTLY LEARNING -->
+  <section>
+
+    <div class="container">
+
+      <div class="section-label">
+        CURRENTLY LEARNING
+      </div>
+
+      <h2>
+        Always improving.
+      </h2>
+
+
+      <div class="learning-grid">
+
+        <div class="learning-card">
+          <h3>Python & SQL</h3>
+          <p>
+            Strengthening programming and database skills.
+          </p>
+        </div>
+
+        <div class="learning-card">
+          <h3>Data Engineering</h3>
+          <p>
+            Learning ETL/ELT, pipelines, and data workflows.
+          </p>
+        </div>
+
+        <div class="learning-card">
+          <h3>Microsoft Azure</h3>
+          <p>
+            Exploring cloud data engineering concepts.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <div class="section-label">
+          CONTACT
+        </div>
+
+        <h2>
+          Let's connect.
+        </h2>
+
+        <p>
+          I’m open to internships, training opportunities,
+          and meaningful conversations about Data Engineering.
+        </p>
+
+
+        <div class="contact-links">
+
+          <a
+            class="contact-link"
+            href="mailto:mustafaamany704@gmail.com">
+            ✉ Email Me
+          </a>
+
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/amany-mustafa-bb2770344"
+            target="_blank">
+            LinkedIn
+          </a>
+
+          <a
+            class="contact-link"
+            href="https://github.com/Amany-mostafa"
+            target="_blank">
+            GitHub
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Amany Mustafa · Aspiring Data Engineer
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+      link.addEventListener('click', function(e) {
+
+        const target = document.querySelector(
+          this.getAttribute('href')
+        );
+
+        if (target) {
+
+          e.preventDefault();
+
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+
+        }
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
