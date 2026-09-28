@@ -3,21 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amany Mustafa | Junior Data Engineer</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amany Mustafa | Data Engineer</title>
 
   <style>
@@ -167,37 +152,59 @@
     }
 
     .about-text {
-      max-width: 850px;
+      max-width: 900px;
       color: #cbd5e1;
       font-size: 17px;
     }
 
-    .skills-grid {
+    /* Skills */
+
+    .skills-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
       margin-top: 30px;
     }
 
-    .skill {
+    .skill-group {
       background: #111827;
       border: 1px solid #1f2937;
-      padding: 18px;
-      border-radius: 8px;
-      text-align: center;
-      color: #e2e8f0;
+      border-radius: 10px;
+      padding: 25px;
       transition: 0.3s;
     }
 
-    .skill:hover {
+    .skill-group:hover {
       border-color: #d946ef;
       transform: translateY(-3px);
     }
 
-    .services-grid,
-    .projects-grid {
+    .skill-group h3 {
+      color: #ffffff;
+      margin-bottom: 18px;
+      font-size: 20px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #0b1120;
+      border: 1px solid #334155;
+      padding: 8px 13px;
+      border-radius: 6px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    /* Services */
+
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 25px;
       margin-top: 30px;
     }
@@ -224,24 +231,63 @@
       color: #94a3b8;
     }
 
+    /* Projects */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 35px;
+    }
+
+    .project-card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: #d946ef;
+    }
+
     .project-image {
       width: 100%;
-      height: 180px;
+      height: 240px;
       object-fit: cover;
-      border-radius: 7px;
-      margin-bottom: 18px;
+      display: block;
       background: #1f2937;
+    }
+
+    .project-content {
+      padding: 28px;
+    }
+
+    .project-content h3 {
+      color: #ffffff;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .project-content p {
+      color: #94a3b8;
+      margin-bottom: 18px;
+      font-size: 15px;
     }
 
     .project-tag {
       display: inline-block;
-      margin-top: 15px;
-      padding: 5px 10px;
+      padding: 6px 12px;
       border-radius: 15px;
       font-size: 12px;
       color: #d946ef;
       border: 1px solid #d946ef;
+      margin-right: 6px;
     }
+
+    /* Education */
 
     .education {
       max-width: 850px;
@@ -262,6 +308,8 @@
     .education-item p {
       color: #94a3b8;
     }
+
+    /* Contact */
 
     .contact {
       text-align: center;
@@ -285,6 +333,14 @@
       padding: 25px;
       border-top: 1px solid #1f2937;
       color: #64748b;
+    }
+
+    @media (max-width: 900px) {
+      .skills-container,
+      .projects-grid,
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 768px) {
@@ -318,6 +374,10 @@
       section {
         padding: 80px 6%;
       }
+
+      .project-image {
+        height: 200px;
+      }
     }
   </style>
 </head>
@@ -326,6 +386,7 @@
 
   <nav>
     <div class="logo">Amany Mustafa</div>
+
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -336,559 +397,18 @@
     </ul>
   </nav>
 
+  <!-- Hero -->
+
   <section class="hero">
+
     <div class="hero-text">
+
       <span class="hero-badge">DATA ENGINEER</span>
 
       <h1>Hi, I'm <span>Amany Mustafa</span></h1>
 
       <p>
         I'm an aspiring Data Engineer focused on Python, SQL, databases,
-        data cleaning, ETL, and data pipelines. I build practical data
-        solutions that transform raw data into clean, structured, and
-        analysis-ready information.
-      </p>
-
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#contact" class="btn btn-outline">Contact Me</a>
-    </div>
-
-    <div class="profile-container">
-      <img src="profile.jpg" alt="Amany Mustafa" class="profile-image">
-    </div>
-  </section>
-
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-
-    <p class="section-subtitle">
-      Building practical foundations in data engineering and data systems.
-    </p>
-
-    <p class="about-text">
-      I am an aspiring Data Engineer with a strong interest in building
-      reliable data solutions and working with structured data. My current
-      focus includes Python, SQL, relational databases, data cleaning,
-      transformation, ETL processes, and data pipelines.
-      <br><br>
-      I enjoy learning how raw data can be organized, transformed, and
-      prepared to support real-world applications and decision-making.
-      I am continuously developing my technical skills through academic
-      projects, practical training, and hands-on exercises.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2 class="section-title">Technical Skills</h2>
-
-    <p class="section-subtitle">
-      Technologies and concepts I work with and continue to develop.
-    </p>
-
-    <div class="skills-grid">
-      <div class="skill">Python</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Pandas</div>
-      <div class="skill">NumPy</div>
-      <div class="skill">ETL / ELT</div>
-      <div class="skill">Data Cleaning</div>
-      <div class="skill">Data Transformation</div>
-      <div class="skill">Data Pipelines</div>
-      <div class="skill">Relational Databases</div>
-      <div class="skill">Database Design</div>
-      <div class="skill">Microsoft Access</div>
-      <div class="skill">Microsoft Azure</div>
-      <div class="skill">Git</div>
-      <div class="skill">GitHub</div>
-      <div class="skill">Jupyter Notebook</div>
-    </div>
-  </section>
-
-  <section id="services">
-    <h2 class="section-title">Offered Services</h2>
-
-    <p class="section-subtitle">
-      Practical data-related services I can provide.
-    </p>
-
-    <div class="services-grid">
-
-      <div class="card">
-        <h3>Data Cleaning</h3>
-        <p>
-          Cleaning and preparing datasets using Python and Pandas,
-          including handling missing values, duplicates, inconsistent
-          formats, and data types.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>SQL & Database Tasks</h3>
-        <p>
-          Writing SQL queries, working with relational databases,
-          joins, views, subqueries, stored procedures, and database
-          fundamentals.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Data Preparation & ETL</h3>
-        <p>
-          Preparing structured datasets and applying basic ETL concepts
-          to transform raw data into clean and organized information.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
-
-    <p class="section-subtitle">
-      Academic and training projects demonstrating practical technical skills.
-    </p>
-
-    <div class="projects-grid">
-
-      <div class="card">
-        <img
-          src="student-grade.jpeg"
-          alt="Student Grade Management System"
-          class="project-image"
-        >
-
-        <h3>Student Grade Management System</h3>
-
-        <p>
-          A Python-based system for managing student information and
-          calculating and organizing student grades.
-        </p>
-
-        <span class="project-tag">Python</span>
-      </div>
-
-      <div class="card">
-        <img
-          src="employee-system.jpeg"
-          alt="Employee Management System"
-          class="project-image"
-        >
-
-        <h3>Employee Management System</h3>
-
-        <p>
-          A Python project designed to manage employee information and
-          perform basic employee-related operations.
-        </p>
-
-        <span class="project-tag">Python</span>
-      </div>
-
-      <div class="card">
-        <img
-          src="college-database.jpeg"
-          alt="College Database System"
-          class="project-image"
-        >
-
-        <h3>College Database System</h3>
-
-        <p>
-          A database project developed using Microsoft Access to organize
-          college-related data and demonstrate database fundamentals.
-        </p>
-
-        <span class="project-tag">Microsoft Access</span>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="education">
-    <h2 class="section-title">Education & Training</h2>
-
-    <p class="section-subtitle">
-      Academic background and technical training.
-    </p>
-
-    <div class="education">
-
-      <div class="education-item">
-        <h3>Assiut University</h3>
-        <p>Faculty of Computers and Information</p>
-        <p>Bachelor's Degree — Expected Graduation 2027</p>
-      </div>
-
-      <div class="education-item">
-        <h3>DEPI — AI & Data Science</h3>
-        <p>Microsoft Data Engineer Program</p>
-        <p>
-          Training in Python, SQL, databases, ETL, data engineering
-          fundamentals, and Microsoft Azure.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-
-    <h2 class="section-title">Let's Connect</h2>
-
-    <p>
-      Interested in discussing a project, collaboration, or data-related opportunity?
-    </p>
-
-    <div class="contact-links">
-
-      <a href="mailto:mustafaamany704@gmail.com" class="btn">
-        Email Me
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/amany-mustafa-bb2770344"
-        target="_blank"
-        class="btn btn-outline"
-      >
-        LinkedIn
-      </a>
-
-      <a
-        href="https://github.com/Amany-mostafa"
-        target="_blank"
-        class="btn btn-outline"
-      >
-        GitHub
-      </a>
-
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Amany Mustafa · Data Engineer
-  </footer>
-
-</body>
-</html>
-      font-family: Arial, sans-serif;
-      background: #0b1120;
-      color: #f5f7fa;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(11, 17, 32, 0.95);
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      border-bottom: 1px solid #1f2937;
-    }
-
-    nav .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-
-    nav ul li a {
-      color: #cbd5e1;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #d946ef;
-    }
-
-    section {
-      padding: 100px 8%;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 50px;
-      padding-top: 130px;
-    }
-
-    .hero-text {
-      max-width: 650px;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      color: #d946ef;
-      border: 1px solid #d946ef;
-      padding: 7px 15px;
-      border-radius: 20px;
-      font-size: 13px;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
-    }
-
-    .hero h1 {
-      font-size: 58px;
-      margin-bottom: 15px;
-    }
-
-    .hero h1 span {
-      color: #d946ef;
-    }
-
-    .hero p {
-      color: #cbd5e1;
-      font-size: 18px;
-      margin-bottom: 30px;
-      max-width: 620px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #d946ef;
-      color: white;
-      border-radius: 6px;
-      font-weight: bold;
-      margin-right: 10px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      opacity: 0.85;
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid #d946ef;
-      color: #d946ef;
-    }
-
-    .profile-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .profile-image {
-      width: 280px;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #d946ef;
-      box-shadow: 0 0 35px rgba(217, 70, 239, 0.25);
-    }
-
-    .section-title {
-      font-size: 36px;
-      margin-bottom: 15px;
-      color: #ffffff;
-    }
-
-    .section-subtitle {
-      color: #94a3b8;
-      margin-bottom: 40px;
-    }
-
-    .about-text {
-      max-width: 850px;
-      color: #cbd5e1;
-      font-size: 17px;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .skill {
-      background: #111827;
-      border: 1px solid #1f2937;
-      padding: 18px;
-      border-radius: 8px;
-      text-align: center;
-      color: #e2e8f0;
-      transition: 0.3s;
-    }
-
-    .skill:hover {
-      border-color: #d946ef;
-      transform: translateY(-3px);
-    }
-
-    .services-grid,
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
-
-    .card {
-      background: #111827;
-      border: 1px solid #1f2937;
-      border-radius: 10px;
-      padding: 25px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #d946ef;
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      color: #ffffff;
-    }
-
-    .card p {
-      color: #94a3b8;
-    }
-
-    .project-image {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 7px;
-      margin-bottom: 18px;
-      background: #1f2937;
-    }
-
-    .project-tag {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 5px 10px;
-      border-radius: 15px;
-      font-size: 12px;
-      color: #d946ef;
-      border: 1px solid #d946ef;
-    }
-
-    .education {
-      max-width: 850px;
-    }
-
-    .education-item {
-      background: #111827;
-      border-left: 3px solid #d946ef;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-    }
-
-    .education-item h3 {
-      margin-bottom: 5px;
-    }
-
-    .education-item p {
-      color: #94a3b8;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact p {
-      color: #94a3b8;
-      margin-bottom: 10px;
-    }
-
-    .contact-links {
-      margin-top: 25px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      border-top: 1px solid #1f2937;
-      color: #64748b;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        padding: 15px 5%;
-      }
-
-      nav ul {
-        gap: 12px;
-        font-size: 13px;
-      }
-
-      .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .profile-image {
-        width: 220px;
-        height: 220px;
-      }
-
-      section {
-        padding: 80px 6%;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <nav>
-    <div class="logo">Amany Mustafa</div>
-
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero">
-
-    <div class="hero-text">
-
-      <span class="hero-badge">JUNIOR DATA ENGINEER</span>
-
-      <h1>Hi, I'm <span>Amany Mustafa</span></h1>
-
-      <p>
-        I'm a Junior Data Engineer focused on Python, SQL, databases,
         data cleaning, ETL, and data pipelines. I build practical data
         solutions that transform raw data into clean, structured, and
         analysis-ready information.
@@ -912,61 +432,109 @@
 
   </section>
 
+  <!-- About -->
+
   <section id="about">
 
     <h2 class="section-title">About Me</h2>
 
     <p class="section-subtitle">
-      Junior Data Engineer focused on building practical data solutions.
+      Building practical foundations in data engineering and data systems.
     </p>
 
     <p class="about-text">
 
-      I am a Junior Data Engineer with a strong interest in building
-      reliable data solutions and working with structured data. My focus
-      includes Python, SQL, relational databases, data cleaning,
+      I am an aspiring Data Engineer with a strong interest in building
+      reliable data solutions and working with structured data. My current
+      focus includes Python, SQL, relational databases, data cleaning,
       transformation, ETL processes, and data pipelines.
 
       <br><br>
 
-      I enjoy working with data and understanding how raw information
-      can be organized, transformed, and prepared for real-world use.
-      I continue to strengthen my technical skills through academic
-      projects, practical training, and hands-on experience.
+      I enjoy working with data and understanding how raw information can
+      be organized, transformed, and prepared for real-world use.
+      My technical experience includes using Python and Pandas for data
+      manipulation and cleaning, SQL for querying relational databases,
+      and applying foundational ETL concepts for data preparation and
+      transformation. I also have hands-on experience with database
+      design using Microsoft Access and am developing my knowledge of
+      Microsoft Azure and data engineering workflows.
 
     </p>
 
   </section>
+
+  <!-- Skills -->
 
   <section id="skills">
 
     <h2 class="section-title">Technical Skills</h2>
 
     <p class="section-subtitle">
-      Technologies and concepts I work with.
+      Technologies and concepts I work with and continue to develop.
     </p>
 
-    <div class="skills-grid">
+    <div class="skills-container">
 
-      <div class="skill">Python</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Pandas</div>
-      <div class="skill">NumPy</div>
-      <div class="skill">ETL / ELT</div>
-      <div class="skill">Data Cleaning</div>
-      <div class="skill">Data Transformation</div>
-      <div class="skill">Data Pipelines</div>
-      <div class="skill">Relational Databases</div>
-      <div class="skill">Database Design</div>
-      <div class="skill">Microsoft Access</div>
-      <div class="skill">Microsoft Azure</div>
-      <div class="skill">Git</div>
-      <div class="skill">GitHub</div>
-      <div class="skill">Jupyter Notebook</div>
+      <div class="skill-group">
+
+        <h3>Programming & Data Processing</h3>
+
+        <div class="skills-list">
+          <span class="skill">Python</span>
+          <span class="skill">Pandas</span>
+          <span class="skill">NumPy</span>
+        </div>
+
+      </div>
+
+
+      <div class="skill-group">
+
+        <h3>Databases & SQL</h3>
+
+        <div class="skills-list">
+          <span class="skill">SQL</span>
+          <span class="skill">Relational Databases</span>
+          <span class="skill">Database Design</span>
+          <span class="skill">Microsoft Access</span>
+        </div>
+
+      </div>
+
+
+      <div class="skill-group">
+
+        <h3>Data Engineering</h3>
+
+        <div class="skills-list">
+          <span class="skill">ETL / ELT</span>
+          <span class="skill">Data Cleaning</span>
+          <span class="skill">Data Transformation</span>
+          <span class="skill">Data Pipelines</span>
+        </div>
+
+      </div>
+
+
+      <div class="skill-group">
+
+        <h3>Tools & Platforms</h3>
+
+        <div class="skills-list">
+          <span class="skill">Microsoft Azure</span>
+          <span class="skill">Git</span>
+          <span class="skill">GitHub</span>
+          <span class="skill">Jupyter Notebook</span>
+        </div>
+
+      </div>
 
     </div>
 
   </section>
+
+  <!-- Services -->
 
   <section id="services">
 
@@ -990,6 +558,7 @@
 
       </div>
 
+
       <div class="card">
 
         <h3>SQL & Database Tasks</h3>
@@ -1001,6 +570,7 @@
         </p>
 
       </div>
+
 
       <div class="card">
 
@@ -1017,6 +587,8 @@
 
   </section>
 
+  <!-- Projects -->
+
   <section id="projects">
 
     <h2 class="section-title">Projects</h2>
@@ -1027,26 +599,34 @@
 
     <div class="projects-grid">
 
-      <div class="card">
+
+      <div class="project-card">
 
         <img
-          src="student-project.jpeg"
+          src="student-grade.jpeg"
           alt="Student Grade Management System"
           class="project-image"
         >
 
-        <h3>Student Grade Management System</h3>
+        <div class="project-content">
 
-        <p>
-          A Python-based system for managing student information and
-          calculating and organizing student grades.
-        </p>
+          <h3>Student Grade Management System</h3>
 
-        <span class="project-tag">Python</span>
+          <p>
+            A Python-based system for managing student information and
+            organizing student grades. The project demonstrates practical
+            use of Python programming concepts for handling and processing
+            student-related data.
+          </p>
+
+          <span class="project-tag">Python</span>
+
+        </div>
 
       </div>
 
-      <div class="card">
+
+      <div class="project-card">
 
         <img
           src="employee-system.jpeg"
@@ -1054,18 +634,24 @@
           class="project-image"
         >
 
-        <h3>Employee Management System</h3>
+        <div class="project-content">
 
-        <p>
-          A Python project designed to manage employee information and
-          perform basic employee-related operations.
-        </p>
+          <h3>Employee Management System</h3>
 
-        <span class="project-tag">Python</span>
+          <p>
+            A Python-based project for managing employee information and
+            performing basic employee-related operations. The project
+            demonstrates structured programming and data handling concepts.
+          </p>
+
+          <span class="project-tag">Python</span>
+
+        </div>
 
       </div>
 
-      <div class="card">
+
+      <div class="project-card">
 
         <img
           src="college-database.jpeg"
@@ -1073,20 +659,28 @@
           class="project-image"
         >
 
-        <h3>College Database System</h3>
+        <div class="project-content">
 
-        <p>
-          A database project developed using Microsoft Access to organize
-          college-related data and demonstrate database fundamentals.
-        </p>
+          <h3>College Database System</h3>
 
-        <span class="project-tag">Microsoft Access</span>
+          <p>
+            A database project developed using Microsoft Access to organize
+            college-related information. The project demonstrates database
+            design and relational data management fundamentals.
+          </p>
+
+          <span class="project-tag">Microsoft Access</span>
+
+        </div>
 
       </div>
+
 
     </div>
 
   </section>
+
+  <!-- Education -->
 
   <section id="education">
 
@@ -1108,6 +702,7 @@
 
       </div>
 
+
       <div class="education-item">
 
         <h3>DEPI — AI & Data Science</h3>
@@ -1125,13 +720,14 @@
 
   </section>
 
+  <!-- Contact -->
+
   <section id="contact" class="contact">
 
     <h2 class="section-title">Let's Connect</h2>
 
     <p>
-      Interested in discussing a project, collaboration, or
-      data-related opportunity?
+      Interested in discussing a project, collaboration, or data-related opportunity?
     </p>
 
     <div class="contact-links">
@@ -1143,6 +739,7 @@
         Email Me
       </a>
 
+
       <a
         href="https://www.linkedin.com/in/amany-mustafa-bb2770344"
         target="_blank"
@@ -1150,6 +747,7 @@
       >
         LinkedIn
       </a>
+
 
       <a
         href="https://github.com/Amany-mostafa"
@@ -1164,7 +762,7 @@
   </section>
 
   <footer>
-    © 2026 Amany Mustafa · Junior Data Engineer
+    © 2026 Amany Mustafa · Data Engineer
   </footer>
 
 </body>
