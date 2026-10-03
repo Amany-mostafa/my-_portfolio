@@ -1,3 +1,4 @@
+```css
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 * {
@@ -43,7 +44,7 @@ header {
 .logo {
     font-size: 20px;
     font-weight: 800;
-    color: #38bdf8;
+    color: #f472b6;
 }
 
 .nav-links {
@@ -59,7 +60,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #38bdf8;
+    color: #f472b6;
 }
 
 /* ================= HERO ================= */
@@ -76,12 +77,12 @@ header {
     background:
         radial-gradient(
             circle at 80% 20%,
-            rgba(56, 189, 248, 0.12),
+            rgba(244, 114, 182, 0.12),
             transparent 30%
         ),
         radial-gradient(
             circle at 20% 80%,
-            rgba(99, 102, 241, 0.10),
+            rgba(168, 85, 247, 0.08),
             transparent 30%
         );
 }
@@ -95,7 +96,7 @@ header {
     padding: 7px 14px;
     border: 1px solid #334155;
     border-radius: 30px;
-    color: #38bdf8;
+    color: #f472b6;
     font-size: 13px;
     font-weight: 600;
     margin-bottom: 22px;
@@ -109,20 +110,7 @@ header {
 }
 
 .hero h1 span {
-    color: #38bdf8;
-}
-
-.hero h2 {
-    font-size: 28px;
-    color: #cbd5e1;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    max-width: 720px;
-    color: #94a3b8;
-    font-size: 17px;
-    margin-bottom: 30px;
+    color: #f472b6;
 }
 
 .hero-buttons {
@@ -140,14 +128,14 @@ header {
 }
 
 .primary-btn {
-    background: #38bdf8;
-    color: #07111f;
-    border-color: #38bdf8;
+    background: #f472b6;
+    color: #1f0b18;
+    border-color: #f472b6;
 }
 
 .primary-btn:hover {
     transform: translateY(-2px);
-    background: #7dd3fc;
+    background: #f9a8d4;
 }
 
 .secondary-btn {
@@ -155,8 +143,8 @@ header {
 }
 
 .secondary-btn:hover {
-    border-color: #38bdf8;
-    color: #38bdf8;
+    border-color: #f472b6;
+    color: #f472b6;
 }
 
 .hero-image {
@@ -168,8 +156,8 @@ header {
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #38bdf8;
-    box-shadow: 0 0 40px rgba(56, 189, 248, 0.15);
+    border: 3px solid #f472b6;
+    box-shadow: 0 0 40px rgba(244, 114, 182, 0.15);
 }
 
 /* ================= SECTIONS ================= */
@@ -185,7 +173,7 @@ header {
 }
 
 .section-title span {
-    color: #38bdf8;
+    color: #f472b6;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -225,7 +213,7 @@ header {
 }
 
 .skill-group:hover {
-    border-color: #38bdf8;
+    border-color: #f472b6;
     transform: translateY(-3px);
 }
 
@@ -267,7 +255,7 @@ header {
 
 .service-card:hover {
     transform: translateY(-4px);
-    border-color: #38bdf8;
+    border-color: #f472b6;
 }
 
 .service-card h3 {
@@ -298,7 +286,7 @@ header {
 
 .project-card:hover {
     transform: translateY(-5px);
-    border-color: #38bdf8;
+    border-color: #f472b6;
 }
 
 .project-image {
@@ -321,9 +309,9 @@ header {
 
 .project-tag {
     display: inline-block;
-    color: #38bdf8;
-    background: rgba(56, 189, 248, 0.08);
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: #f472b6;
+    background: rgba(244, 114, 182, 0.08);
+    border: 1px solid rgba(244, 114, 182, 0.2);
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 12px;
@@ -370,7 +358,7 @@ header {
 .education-card span {
     display: inline-block;
     margin-top: 8px;
-    color: #38bdf8;
+    color: #f472b6;
     font-size: 13px;
 }
 
@@ -406,8 +394,8 @@ header {
 }
 
 .contact-links a:hover {
-    border-color: #38bdf8;
-    color: #38bdf8;
+    border-color: #f472b6;
+    color: #f472b6;
 }
 
 /* ================= FOOTER ================= */
@@ -463,10 +451,6 @@ footer {
         letter-spacing: -1.5px;
     }
 
-    .hero h2 {
-        font-size: 23px;
-    }
-
     .section-title h2 {
         font-size: 32px;
     }
@@ -475,3 +459,4 @@ footer {
         height: 210px;
     }
 }
+```
