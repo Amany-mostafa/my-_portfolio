@@ -1,209 +1,103 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Amany Mustafa | Data Engineer</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Amany Mustafa</div>
-
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <!-- Hero -->
-    <section id="home" class="hero">
-
-        <div class="hero-content">
-
-            <span class="badge">DATA ENGINEER</span>
-
-            <h1>Hi, I'm <span>Amany Mustafa</span></h1>
-
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn">View My Projects</a>
-                <a href="#contact" class="btn secondary-btn">Contact Me</a>
-            </div>
-
-        </div>
-
-        <div class="hero-image">
-            <img src="profile.jpg" alt="Amany Mustafa">
-        </div>
-
-    </section>
-
-
-    <!-- About -->
-    <section id="about" class="section">
-
-        <div class="section-title">
-            <span>ABOUT ME</span>
-            <h2>Professional Profile</h2>
-        </div>
-
-        <div class="about-content">
-
-            <p>
-                I am a Data Engineer with a strong interest in building
-                reliable data solutions and working with data throughout its
-                lifecycle.
-            </p>
-
-            <p>
-                I enjoy working with data and understanding how raw information
-                can be organized, transformed, and prepared for real-world use.
-                My technical experience includes using Python and Pandas for data
-                manipulation and cleaning, SQL for querying relational databases,
-                and applying foundational ETL concepts for data preparation and
-                transformation. I also have hands-on experience with database
-                design using Microsoft Access and am developing my knowledge of
-                Microsoft Azure and data engineering workflows.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-
-        <div class="section-title">
-            <span>TECHNICAL SKILLS</span>
-            <h2>My Skills</h2>
-        </div>
-
-        <div class="skills-container">
-
-            <div class="skill-group">
-                <h3>Programming & Data Processing</h3>
-
-                <div class="skill-list">
-                    <span>Python</span>
-                    <span>Pandas</span>
-                    <span>NumPy</span>
-                </div>
-            </div>
-
-
-            <div class="skill-group">
-                <h3>Databases & SQL</h3>
-
-                <div class="skill-list">
-                    <span>SQL</span>
-                    <span>Relational Databases</span>
-                    <span>Database Design</span>
-                    <span>Microsoft Access</span>
-                </div>
-            </div>
-
-
-            <div class="skill-group">
-                <h3>Data Engineering</h3>
-
-                <div class="skill-list">
-                    <span>ETL / ELT</span>
-                    <span>Data Cleaning</span>
-                    <span>Data Transformation</span>
-                    <span>Data Pipelines</span>
-                </div>
-            </div>
-
-
-            <div class="skill-group">
-                <h3>Tools & Platforms</h3>
-
-                <div class="skill-list">
-                    <span>Microsoft Azure</span>
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>Jupyter Notebook</span>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Services -->
-    <section id="services" class="section">
-
-        <div class="section-title">
-            <span>SERVICES</span>
-            <h2>What I Can Offer</h2>
-        </div>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-                <h3>Data Cleaning</h3>
-                <p>
-                    Cleaning and organizing datasets using Python and Pandas,
-                    including handling missing values, duplicates, and
-                    inconsistent data.
-                </p>
-            </div>
-
-
-            <div class="service-card">
-                <h3>SQL & Database Tasks</h3>
-                <p>
-                    Working with relational databases and writing SQL queries
-                    for data retrieval, filtering, transformation, and analysis.
-                </p>
-            </div>
-
-
-            <div class="service-card">
-                <h3>Data Preparation & ETL</h3>
-                <p>
-                    Preparing and transforming raw data using foundational
-                    ETL concepts to create clean and structured datasets.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
     <!-- Projects -->
     <section id="projects" class="section">
 
         <div class="section-title">
             <span>PROJECTS</span>
             <h2>Featured Projects</h2>
+            <p>Selected projects showcasing my work in data engineering, databases, and programming.</p>
         </div>
 
         <div class="projects-grid">
 
-            <!-- Project 1 -->
-            <div class="project-card">
+            <!-- Project 1: dbt Data Engineering -->
+            <article class="project-card featured-project">
+
+                <div class="project-image featured-project-image">
+                    <img
+                        src="dbt-project-cover.png"
+                        alt="dbt data engineering pipeline with staging and data warehouse layers"
+                        loading="lazy">
+                    <span class="project-image-label">FEATURED PROJECT</span>
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-tag">Data Engineering · dbt</span>
+
+                    <h3>Employee Data Warehouse with dbt & SQL Server</h3>
+
+                    <p>
+                        An end-to-end dbt project that transforms employee source
+                        data into clean staging models and organized data warehouse
+                        dimension models using Microsoft SQL Server.
+                    </p>
+
+                    <div class="project-tech-stack">
+                        <span>dbt Core</span>
+                        <span>SQL Server</span>
+                        <span>SQL</span>
+                        <span>Jinja</span>
+                        <span>GitHub</span>
+                    </div>
+
+                    <div class="project-highlights">
+                        <div class="project-stat">
+                            <strong>3,000</strong>
+                            <span>Source Records</span>
+                        </div>
+
+                        <div class="project-stat">
+                            <strong>159</strong>
+                            <span>Distinct Countries</span>
+                        </div>
+
+                        <div class="project-stat">
+                            <strong>15/15</strong>
+                            <span>Build Operations Passed</span>
+                        </div>
+                    </div>
+
+                    <h4>Key Features</h4>
+
+                    <ul class="project-feature-list">
+                        <li>Built a staging model to clean strings and standardize employee attributes.</li>
+                        <li>Created employee, department, and country dimension models.</li>
+                        <li>Added generic data tests and a singular SQL test for duplicate employee IDs.</li>
+                        <li>Developed reusable Jinja macros and documented models in separate schema YAML files.</li>
+                        <li>Published dbt documentation with GitHub Pages.</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/Amany-mostafa/depi-dbt-data-engineering"
+                            class="btn primary-btn"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            View on GitHub ↗
+                        </a>
+
+                        <a
+                            href="https://amany-mostafa.github.io/depi-dbt-data-engineering/"
+                            class="btn secondary-btn"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Live Documentation ↗
+                        </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Project 2: Student Grade Management System -->
+            <article class="project-card">
 
                 <div class="project-image">
-                    <img src="student-project.jpeg"
-                         alt="Student Grade Management System">
+                    <img
+                        src="student-project.jpeg"
+                        alt="Student Grade Management System"
+                        loading="lazy">
                 </div>
 
                 <div class="project-content">
@@ -221,15 +115,17 @@
 
                 </div>
 
-            </div>
+            </article>
 
 
-            <!-- Project 2 -->
-            <div class="project-card">
+            <!-- Project 3: Employee Management System -->
+            <article class="project-card">
 
                 <div class="project-image">
-                    <img src="employee-system.jpeg"
-                         alt="Employee Management System">
+                    <img
+                        src="employee-system.jpeg"
+                        alt="Employee Management System"
+                        loading="lazy">
                 </div>
 
                 <div class="project-content">
@@ -239,140 +135,4 @@
                     <h3>Employee Management System</h3>
 
                     <p>
-                        A Python-based project for managing employee information
-                        and performing basic employee-related operations. The
-                        project demonstrates structured programming and data
-                        handling concepts.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- Project 3 -->
-            <div class="project-card">
-
-                <div class="project-image">
-                    <img src="ollege-database.jpeg"
-                         alt="College Database System">
-                </div>
-
-                <div class="project-content">
-
-                    <span class="project-tag">Microsoft Access</span>
-
-                    <h3>College Database System</h3>
-
-                    <p>
-                        A database project developed using Microsoft Access to
-                        organize college-related information. The project
-                        demonstrates database design and relational data
-                        management fundamentals.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Education -->
-    <section id="education" class="section">
-
-        <div class="section-title">
-            <span>EDUCATION</span>
-            <h2>Education & Training</h2>
-        </div>
-
-        <div class="education-container">
-
-            <div class="education-card">
-
-                <h3>Assiut University</h3>
-
-                <p>
-                    Faculty of Computers and Information
-                </p>
-
-                <p>
-                    Bachelor's Degree
-                </p>
-
-                <span>Expected Graduation: 2027</span>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <h3>DEPI</h3>
-
-                <p>
-                    AI & Data Science — Microsoft Data Engineer Program
-                </p>
-
-                <p>
-                    Training in Python, SQL, databases, ETL,
-                    data engineering fundamentals, and Microsoft Azure.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact" class="section contact-section">
-
-        <div class="section-title">
-            <span>CONTACT</span>
-            <h2>Let's Connect</h2>
-        </div>
-
-        <div class="contact-content">
-
-            <p>
-                Interested in working together or discussing a data engineering
-                project? Feel free to reach out.
-            </p>
-
-            <div class="contact-links">
-
-                <a href="mailto:mustafaamany704@gmail.com">
-                    Email
-                </a>
-
-                <a href="https://www.linkedin.com/in/amany-mustafa-bb2770344"
-                   target="_blank">
-                    LinkedIn
-                </a>
-
-                <a href="https://github.com/Amany-mostafa"
-                   target="_blank">
-                    GitHub
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Amany Mustafa · Data Engineer</p>
-    </footer>
-
-
-    <script src="script.js"></script>
-
-</body>
-</html>
-```
+                        A Python-based
